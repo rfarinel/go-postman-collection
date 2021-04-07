@@ -1,4 +1,4 @@
-module github.com/rbretecher/go-postman-collection
+module github.com/rfarinel/go-postman-collection
 
 go 1.13
 
