@@ -101,6 +101,15 @@ func (suite *CollectionTestSuite) SetupTest() {
 				},
 			},
 		},
+		Auth: &Auth{
+			Type: Basic,
+			Basic: []*AuthParam{
+				{
+					Key:   "username",
+					Value: "admin",
+				},
+			},
+		},
 		Variables: []*Variable{
 			{
 				Name:  "a-global-collection-variable",
@@ -203,6 +212,16 @@ func (suite *CollectionTestSuite) SetupTest() {
 				EventScript: &Script{
 					ScriptType: "text/javascript",
 					Exec: []string{"console.log(\"bar\")"},
+				},
+			},
+		},
+		Auth: &Auth{
+			Type: Basic,
+			Basic: []*AuthParam{
+				{
+					Key:   "username",
+					Value: "admin",
+					Type: "string",
 				},
 			},
 		},

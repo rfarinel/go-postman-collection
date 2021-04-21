@@ -27,6 +27,7 @@ type Info struct {
 type Collection struct {
 	Info      Info        `json:"info"`
 	Items     []*Items    `json:"item"`
+	Auth      *Auth       `json:"auth,omitempty"`
 	Events    []*Event    `json:"event,omitempty"`
 	Variables []*Variable `json:"variable,omitempty"`
 }
